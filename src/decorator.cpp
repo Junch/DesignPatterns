@@ -2,7 +2,7 @@
 
 #include <gmock/gmock.h>
 #include <iostream>
-using namespace std;
+#include <memory>
 
 class Widget {
 public:
@@ -18,7 +18,7 @@ public:
     }
  
     void draw() {
-        cout << "TextField: " << width << ", " << height << '\n';
+        std::cout << "TextField: " << width << ", " << height << '\n';
     }
 
 private:
@@ -43,7 +43,7 @@ public:
  
     void draw() {
         Decorator::draw();
-        cout << "   BorderDecorator" << '\n';
+        std::cout << "   BorderDecorator" << '\n';
     }
 };
 
@@ -53,7 +53,7 @@ public:
  
     void draw() {
         Decorator::draw();
-        cout << "   ScrollDecorator" << '\n';
+        std::cout << "   ScrollDecorator" << '\n';
     }
 };
 
