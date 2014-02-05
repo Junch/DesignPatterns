@@ -45,8 +45,10 @@ INCLUDE_DIRECTORIES(${source_dir}/gtest/include)
 EXTERNALPROJECT_GET_PROPERTY(googlemock binary_dir)
 LINK_DIRECTORIES(${binary_dir})
 
+SET(sources ${PROJECT_SOURCE_DIR}/src/observer.cpp)
+
 # Add test executable target
-ADD_EXECUTABLE(MainTest ${PROJECT_SOURCE_DIR}/src/main.cpp)
+ADD_EXECUTABLE(MainTest ${sources})
 
 # Create dependency of MainTest on googlemock
 ADD_DEPENDENCIES(MainTest googlemock)
