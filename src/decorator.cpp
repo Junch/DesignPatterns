@@ -57,7 +57,7 @@ public:
     }
 };
 
-TEST(Decorator, Show) {
+TEST(Decorator, Demo) {
     std::unique_ptr<Widget> aWidget(new BorderDecorator(new BorderDecorator(new ScrollDecorator (new TextField(80, 24)))));
     aWidget->draw();
 }

@@ -46,7 +46,8 @@ EXTERNALPROJECT_GET_PROPERTY(googlemock binary_dir)
 LINK_DIRECTORIES(${binary_dir})
 
 SET(sources ${PROJECT_SOURCE_DIR}/src/observer.cpp
-            ${PROJECT_SOURCE_DIR}/src/decorator.cpp)
+            ${PROJECT_SOURCE_DIR}/src/decorator.cpp
+            ${PROJECT_SOURCE_DIR}/src/factory.cpp)
 
 # Add test executable target
 ADD_EXECUTABLE(MainTest ${sources})
